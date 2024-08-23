@@ -1,0 +1,29 @@
+//Java program to take marks of 5 subjects as input from user(out of 100) and calculate the total percentage.
+
+import java.util.Scanner;
+public class Percentage
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		int math,physics,chemistry,english,painting;
+		System.out.println("Enter Math score: ");
+		math = sc.nextInt();
+		System.out.println("Enter Physics score: ");
+		physics = sc.nextInt();
+		System.out.println("Enter Chemistry score: ");
+		chemistry = sc.nextInt();
+		System.out.println("Enter English score: ");
+		english = sc.nextInt();
+		System.out.println("Enter Physical Education score: ");
+		painting = sc.nextInt();
+		
+		double total = math+physics+chemistry+english+painting;
+		double p = total/500.0;
+		double percentage = p*100;
+		
+		System.out.println("Total percentage is : " + percentage);
+		
+		
+	}
+}
