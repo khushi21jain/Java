@@ -1,0 +1,39 @@
+//Rock,paper and scissors game
+
+package khushi2;
+import java.util.*;
+public class Game{
+
+	public static void main(String[] args) 
+{
+    Scanner sc = new Scanner(System.in);
+	System.out.print("Rules for the game: \n"+"\n1.Rock vs Paper => Paper wins.\n" + "2.Paper vs Scissor => Scissor wins.\n" + "3.Scissor vs Rock => Rock wins.\n" + "\nPress enter to continue.\n");
+	String enter = sc.nextLine();
+	System.out.println("Enter 1 for Rock,2 for Scissor,3 for Paper");
+	int input = sc.nextInt();
+	
+	Random r = new Random();
+	int generated = r.nextInt(1,4);{
+	if (input != 0 && input <= 3)
+	{
+		System.out.print("Computer choice : " + generated);
+	}
+	}
+	if (input == generated)
+	{
+		System.out.println("\nIts a Draw!!!");
+	}
+	else if (input == 1 && generated == 3 || input == 2 && generated == 1 || input == 3 && generated == 2 )
+	{
+		System.out.println("\nCongrats,you won!!!");
+	}
+	else if (input == 1 && generated == 2  || input == 2 && generated == 3 || input == 3 && generated == 1 )
+	{
+		System.out.print("\nSorry,you lost.\n" + "Try again.\n" + "Thank you");
+	}
+	else
+	{
+		System.out.print("\n Invalid approach ");
+	}
+}
+}
